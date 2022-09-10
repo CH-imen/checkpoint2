@@ -1,3 +1,82 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  z-index: 1;
+}
+body{
+  background: rgba(2, 2, 26);
+  min-height: 100vh;
+  font-family: 'Times New Roman, Times, serif';
+  animation: move 1s line infinite forwards;
+}
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width:0;
+}
+:root{
+  --color-pri:rgb(82, 188, 250);
+  --color-pri-light:rgba(82, 188, 250, 0.445);
+  --color-sec:rgb(172, 17, 233);
+  --color-sec-light:rgba(172, 188, 250, 0.445);
+--pc-width:75%;
+--tab-width:90%;
+--phone-width:100%;
+}
+body::before{
+  content:"";
+  position:fixed;
+  height: 200px;
+  width:200px;
+  background:rgb(0, 255, 255);
+  filter:blur(140px);
+}
+body::after{
+  content:"";
+  position:fixed;
+  top: 200px;
+  left:250px;
+  width:200px;
+  background:rgb(183, 0, 255);
+  filter:blur(140px);
+}
+.bg-circle1{
+  position:fixed;
+  top:0px;
+  right:0px;
+  height:200px;
+  width:200px;
+  background:rgb(0, 255, 255);
+  filter:blur(140px);
+}
+.bg-circle2{
+  position:fixed;
+  bottom:100px;
+  right:250px;
+  height:200px;
+  width:200px;
+  background:rgb(183, 0, 255);
+  filter:blur(150px);
+}
+.container{
+  width:var(--pc-width);
+  color:var(--text-pri);
+  padding:10px 40px;
+  margin:5px auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+@media(max-width:500px){
+  .container{
+    width:var(--phone-width);
+  }
+}
 .App {
   text-align: center;
 }
@@ -6,7 +85,24 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+img#mailmelogo {
+  width: 28px;
+}
+a#mail {
+  text-decoration: none;
+  color: #564e4e;
+  font-size: 16px;
+  font-weight: bold;
+}
+img#contactimg {
+  border-style: hidden;
+  background-color: #f1f1f1;
+  border-radius: 90px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
